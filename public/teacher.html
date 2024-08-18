@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body bg-gray-200">
+<div class="grid md:grid-cols-3"><!-- Wrapper -->
+    <div class="md:col-span-1 md:flex md:justify-end bg-white nav-section text-gray-700">
+        
+        <nav class="text-right">
+            <div class="flex justify-between items-center" id="burger">
+                <h1 class="font-semibold uppercase mb-4 p-4 border-b border-gray-100">
+                    <a href="" class="text-xl">Teacher</a>
+                </h1>
+                <div class="px-4 cursor-pointer md:hidden">
+                <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </div>
+            </div>
+            <ul class="text-sm mt-6 hidden md:block" id="menu">
+                <li>
+                    <div class="p-4 flex justify-end  border-r-4 border-r-primary menu-item" id="menu-home"><span class="font-bold"> Home </span>
+                    <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                      </svg>
+                    </div>
+                </li>
+                <li>
+                    <div class="p-4 flex justify-end border-r-4 border-r-white menu-item" id="menu-view"><span> View </span>
+                    <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z" />
+                    </svg>
+                </div>
+                </li>
+                <li>
+
+                    <div class="p-4 flex justify-end border-r-4 border-r-white menu-item" id="menu-feedback"><span> Feedbacks </span>
+                    <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3" />
+                      </svg>
+                     </div> 
+                </li>
+
+                <li>
+
+                    <div class="p-4 flex justify-end border-r-4 border-r-white menu-item" id="menu-evaluate"><span> Evaluate </span>
+                        <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                          </svg>
+                          
+                     </div> 
+                </li>
+            </ul>
+        
+            <footer class="flex flex-col absolute bottom-0 left-0 hidden lg:block py-2">
+                <div class="footer-content flex items-center">
+                  <div class="text-xs flex ml-5"><div>Develepor:</div>  <div>Madaka Ajay Kumar</div></div>
+                 
+                
+                  <p class="text-xs ml-10">&copy;MAK. All rights reserved.</p>
+                </div>
+              </footer>
+        </nav>
+    </div>
+
+    <!-- Messages -->
+
+    <div class="absolute top-[6rem] left-5 hidden lg:block">
+
+        <div class="q-dark font-semibold text-3xl">
+            Hello, <br>
+            <span id="username-field" class="ml-5"> Ajay Kumar Madaka</span>
+        </div>
+        <div class="flex items-center mt-5">
+            <svg class="q-dark w-[3rem] h-[2rem]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <div>
+               <h3 class="q-dark">Messages</h3> 
+              </div>
+        </div>
+
+        <div id="messages" class="ml-5 w-[17rem] h-[20rem] overflow-y-scroll">
+           
+        </div>
+    </div>
+    <div class="md:col-span-2 page page-toggle h-screen" id="home-page">
+ 
+    <main class="overflow-y-scroll px-16  py-2 bg-gray-100 md:col-span-2 h-full" id="tasks-section">
+        <div class="flex justify-center md:justify-end">
+            <a href="/Logout" class="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Logout</a>
+            <button id="dark-mode-btn" onclick="ToggleDarkMode(this)" class="text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Dark Mode</button>
+        </div>
+
+        <header>
+            <h2 class="text-5xl font-semibold md:text-6xl q-dark">Teacher's Section</h2>
+        </header>
+
+        <div>
+            <h4 class="font-bold mt-12 pb-2 border-b border-gray-200 q-dark">Assigned Tasks</h4>
+
+            <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-2 gap-10" id="tasks">
+                <!-- Tasks go here -->
+                 <div class="card hover:shadow-lg">
+                    <img src="sem.jpg" alt="sem.jpg" class="w-full h-32 sm:h-48 object-cover">
+                    <div class="m-4">
+                        <span class="font-semibold"><span class="font-bold">ExamDate:</span>13-08-2024</span>
+                        <span class="font-semibold block"><span class="font-bold">ExamTime:</span>12:00</span>
+                    </div>
+                    <div class="flex m-2 justify-center">
+                        <button class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Create</button>
+                    </div>
+                    <div class="badge">
+                        <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                          </svg>
+                          
+                        <span>3 hrs</span>
+                    </div>
+                 </div>
+
+                 <div class="card hover:shadow-lg">
+                    <img src="mid.webp" alt="sem.jpg" class="w-full h-32 sm:h-48 object-cover">
+                    <div class="m-4">
+                        <span class="font-semibold"><span class="font-bold">ExamDate:</span>13-08-2024</span>
+                        <span class="font-semibold block"><span class="font-bold">ExamTime:</span>12:00</span>
+                    </div>
+                    <div class="flex m-2 justify-center">
+                        <button class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Create</button>
+                    </div>
+                    <div class="badge">
+                        <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                          </svg>
+                        <span>45 mins</span>
+                    </div>
+                 </div>
+
+                 <div class="card hover:shadow-lg">
+                    <img src="assignment.jpg" alt="assigment.jpg" class="w-full h-32 sm:h-48 object-cover">
+                    <div class="m-4">
+                        <span class="font-semibold"><span class="font-bold">ExamDate:</span>13-08-2024</span>
+                        <span class="font-semibold block"><span class="font-bold">ExamTime:</span>12:00</span>
+                    </div>
+                    <div class="flex m-2 justify-center">
+                        <button class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Create</button>
+                    </div>
+                    <div class="badge">
+                        <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                          </svg>
+                        <span>20 mins</span>
+                    </div>
+                 </div>
+                 
+            </div>
+        </div>
+    </main>
+    <main class="overflow-y-scroll px-16 py-2 bg-gray-100 md:col-span-2 hidden h-full" id="sem">
+        <div>
+            <h1 class="text-center text-6xl font-bold" >Semester Questions</h1>
+        </div>
+    <div class="mb-10 mt-5">
+<div>
+    <h1 class="text-5xl text-center border-r-4 border-b mb-2">Bit Questions</h1>
+</div>
+    <div>
+        <div class="flex justify-between">
+            <button class="bit-btn" id="sb-0">Bit-01</button>
+            <button class="bit-btn" id="sb-1">Bit-02</button>
+            <button class="bit-btn" id="sb-2">Bit-03</button>
+            <button class="bit-btn" id="sb-3">Bit-04</button>
+            <button class="bit-btn" id="sb-4">Bit-05</button>
+            <button class="bit-btn" id="sb-5">Bit-06</button>
+        </div>
+        <div class="flex justify-between">
+            <button class="bit-btn" id="sb-6">Bit-07</button>
+            <button class="bit-btn" id="sb-7">Bit-08</button>
+            <button class="bit-btn" id="sb-8">Bit-09</button>
+            <button class="bit-btn" id="sb-9">Bit-10</button>
+            <button class="bit-btn" id="sb-10">Bit-11</button>
+            <button class="bit-btn" id="sb-11">Bit-12</button>
+        </div>
+        <div class="flex justify-between">
+            <button class="bit-btn" id="sb-12">Bit-13</button>
+            <button class="bit-btn" id="sb-13">Bit-14</button>
+            <button class="bit-btn" id="sb-14">Bit-15</button>
+            <button class="bit-btn" id="sb-15">Bit-16</button>
+            <button class="bit-btn" id="sb-16">Bit-17</button>
+            <button class="bit-btn" id="sb-17">Bit-18</button>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div>
+        <h1 class="text-5xl text-center border-r-4 border-b mb-2 font-bold">Descriptive Questions</h1>
+    </div>
+        <div>
+            <div class="flex justify-between">
+                <button class="bit-btn" id="sq-0">Question-01</button>
+                <button class="bit-btn" id="sq-1">Question-02</button>
+                <button class="bit-btn" id="sq-2">Question-03</button>
+            </div>
+            <div class="flex justify-between">
+                <button class="bit-btn" id="sq-3">Question-04</button>
+                <button class="bit-btn" id="sq-4">Question-05</button>
+                <button class="bit-btn" id="sq-5">Question-06</button>
+                
+
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="mt-5 flex justify-around">
+        <button class="create-btn" id="create-sem">create</button>
+        <button class="cancel-btn" id="cancel">cancel</button>
+    </div>
+    </main>
+    
+    <main class="overflow-y-scroll px-16 py-2 bg-gray-100 md:col-span-2 hidden h-full" id="mid">
+        <div>
+            <h1 class="text-center text-6xl" >Mid Questions</h1>
+        </div>
+     
+    <div class="mt-20">
+        <div>
+            <h1 class="text-5xl text-center border-r-4 border-b mb-2">Descriptive Questions</h1>
+        </div>
+            <div>
+                <div class="flex justify-around">
+                    <button class="que-btn" id="mq-0">Question-01</button>
+                    <button class="que-btn" id="mq-1">Question-02</button>
+                    
+                </div>
+                <div class="flex justify-around">
+                    <button class="que-btn" id="mq-2">Question-03</button>
+                    <button class="que-btn" id="mq-3">Question-04</button>
+                  
+                </div>
+              
+            </div>
+        </div>
+    
+        <div class="mt-5 mb-10 flex justify-center">
+            <button class="create-btn" id="create-mid">create</button>
+            <button class="cancel-btn ml-10" id="cancel-mid">cancel</button>
+        </div>
+        </main>
+
+
+        <main class="overflow-y-scroll h-full px-16  h-[100vh] flex flex-col items-center justify-center bg-gray-100 md:col-span-2 hidden" id="assignment">
+            <div>
+                <h1 class="text-center text-6xl font-bold" >Assignment Questions</h1>
+            </div>
+            <div class="mb-10 mt-20">
+        <div>
+            <h1 class="text-5xl text-center border-r-4 border-b mb-2">Bit Questions</h1>
+        </div>
+            <div>
+                <div class="flex justify-between">
+                    <button class="bit-btn" id="bq-0">Bit-01</button>
+                    <button class="bit-btn" id="bq-1">Bit-02</button>
+                    <button class="bit-btn" id="bq-2">Bit-03</button>
+                    <button class="bit-btn" id="bq-3">Bit-04</button>
+                    <button class="bit-btn" id="bq-4">Bit-05</button>
+                </div>
+                <div class="flex justify-between">
+                    <button class="bit-btn" id="bq-5">Bit-06</button>
+                    <button class="bit-btn" id="bq-6">Bit-07</button>
+                    <button class="bit-btn" id="bq-7">Bit-08</button>
+                    <button class="bit-btn" id="bq-8">Bit-09</button>
+                    <button class="bit-btn" id="bq-9">Bit-10</button>
+                </div>
+              
+            </div>
+        </div>
+        
+        
+            <div class="mt-5 flex justify-around mb-10">
+                <button class="create-btn" id="create-assignment">create</button>
+                <button class="cancel-btn" id="cancel-assignment">cancel</button>
+            </div>
+            </main>
+ <main class="overflow-y-scroll h-full px-16 h-[100vh] flex items-center justify-center bg-gray-100 md:col-span-2  hidden" id="descriptive">   
+    <div>
+    <div class="mb-5">
+        <h1 class="text-center text-5xl font-bold">Question Details</h1>
+    </div>
+    <div>
+        <div>
+            <h3 class="text-center text-3xl" id="q-header">Question 01</h3>
+        </div>
+        <div class="flex justify-center rounded mt-5">
+            <input type="text" name="" id="entry-que" class="transform scale-150">
+        </div>
+    </div>
+    <div class="mt-10">
+        <div>
+            <h3 class="text-center text-3xl" id="c-header">Choice Question 01</h3>
+        </div>
+        <div class="flex justify-center rounded mt-5">
+            <input type="text" name="" id="entry-choice-que" class="transform scale-150">
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-5">
+        <button class="bit-btn" id="update-descriptive">
+            Update
+        </button>
+    </div>
+</div>
+    </main>
+
+    <main class="h-full px-16 h-[100vh]  bg-gray-100 md:col-span-2 mt-20 hidden" id="objective">   
+        <div>
+        <div class="mb-5">
+            <h1 class="text-center text-5xl font-bold">Question Details</h1>
+        </div>
+        <div>
+            <div>
+                <h3 class="text-center text-3xl " id="bq-header">Question 01</h3>
+            </div>
+            <div class="flex justify-center rounded mt-5">
+                <input type="text" name="" class="transform scale-150" id="bit-que">
+            </div>
+        </div>
+        <div class="mt-10">
+            <div>
+                <h3 class="text-center text-3xl">Choices</h3>
+            </div>
+            <div class="flex justify-center rounded mt-5">
+                <span class="text-gray-600">A:</span><input type="text" name="" id="b-1" class="transform scale-150">
+            </div>
+            <div class="flex justify-center rounded mt-5">
+                <span class="text-gray-600">B:</span><input type="text" name="" id="b-2" class="transform scale-150">
+            </div>
+            <div class="flex justify-center rounded mt-5">
+                <span class="text-gray-600">C:</span><input type="text" name="" id="b-3" class="transform scale-150">
+            </div>
+            <div class="flex justify-center rounded mt-5">
+                <span class="text-gray-600">D:</span><input type="text" name="" id="b-4" class="transform scale-150">
+            </div>
+        </div>
+        <div class="mt-10 flex justify-around items-center">
+            <div class="flex items-center">
+                <input type="radio" name="radio-group" value="A" id="optionA" class="mr-2">
+                <label for="optionA">A</label>
+              </div>
+              <div class="flex items-center">
+                <input type="radio" name="radio-group" value="B" id="optionB" class="mr-2">
+                <label for="optionB">B</label>
+              </div>
+              <div class="flex items-center">
+                <input type="radio" name="radio-group" value="C" id="optionC" class="mr-2">
+                <label for="optionC">C</label>
+              </div>
+              <div class="flex items-center">
+                <input type="radio" name="radio-group" value="D" id="optionD" class="mr-2">
+                <label for="optionD">D</label>
+              </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-5">
+        <button class="bit-btn" id="update-objective">
+            Update
+        </button>
+    </div>
+        </main>
+
+           
+    </div>
+
+    <!-- Feedbacks Page -->
+ 
+    <div class="md:col-span-2 overflow-y-auto page page-toggle hidden h-screen" id="feedbacks-page">
+        <main class="overflow-y-scroll px-16    bg-gray-200 grid md:col-span-2 md:grid-cols-2 lg:grid-cols-3" id="feedbacks">
+
+            <div class="msg-card mt-[10] pt-[8rem] w-[80%]">
+                
+
+                  <div class="mail-icon w-[12rem] shadow-md " style="width:12rem;height:10rem">
+
+                    <div class="mail-body triangle-c1 rounded shadow-md"></div>
+                    <div class="mail-triangle1 mail-triangle"></div>
+
+                    
+                  </div>
+                  <div class="text-yellow-400 absolute bottom-[20%] left-[10%]">
+                    <div class="star">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path class="bg-pink-900" stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                          </svg>
+                          
+                          
+                      </div>
+                      
+                </div>
+
+                <div class="text-yellow-400 absolute bottom-[20%] left-[25%]">
+                    <div class="star">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path class="bg-pink-900" stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                          </svg>
+                          
+                          
+                      </div>     
+                </div>
+
+                <div class="text-yellow-400 absolute bottom-[20%] left-[40%]">
+                    <div class="star">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path class="bg-pink-900" stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                          </svg>
+                          
+                          
+                      </div>     
+                </div>
+
+                <div class="text-yellow-400 absolute bottom-[20%] left-[55%]">
+                    <div class="star">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path class="bg-pink-900" stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                          </svg>
+                          
+                          
+                      </div>     
+                </div>
+
+                <div class="text-yellow-400 absolute bottom-[20%] left-[70%]">
+                    <div class="star">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path class="bg-pink-900" stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                          </svg>
+                          
+                          
+                      </div>     
+                </div>
+                <div class="msg h-[2rem]  hover:h-[10rem] rounded h-[10rem] ml-10  hover:opacity-100 hover:translate-y-[-5%] transition-all duration-300" style="width:10rem;">
+                    <div>
+                        <h1 class="text-center text-gray-900">Ajay Kumar's Feedback</h1>
+                    </div>
+                    <div class="">
+                        <p class="text-center text-gray-700">The exam is very nice but could have been better</p>
+                    </div>
+                </div>                  
+            </div>
+            <div class="msg-card mt-[10] pt-[8rem] w-[80%]">
+                
+
+                <div class="mail-icon w-[12rem] shadow-md " style="width:12rem;height:10rem">
+
+                  <div class="mail-body triangle-c2 rounded shadow-md"></div>
+                  <div class="mail-triangle2 mail-triangle"></div>
+                </div>
+                
+              <div class="msg h-[2rem] overflow-hidden hover:h-[10rem] rounded h-[10rem] ml-10  hover:opacity-100 hover:translate-y-[-5%] transition-all duration-300" style="width:10rem;">
+                  <div>
+                      <h1 class="text-center text-gray-900">Ajay Kumar's Feedback</h1>
+                  </div>
+                  <div class="">
+                      <p class="text-center text-gray-700">The exam is very nice but could have been better</p>
+                  </div>
+              </div>                  
+          </div>
+
+          <div class="msg-card mt-[10] pt-[8rem] w-[80%]">
+                
+
+            <div class="mail-icon w-[12rem] shadow-md " style="width:12rem;height:10rem">
+
+              <div class="mail-body triangle-c3 rounded shadow-md"></div>
+              <div class="mail-triangle3 mail-triangle"></div>
+            </div>
+            
+          <div class="msg h-[2rem] overflow-hidden hover:h-[10rem] rounded h-[10rem] ml-10  hover:opacity-100 hover:translate-y-[-5%] transition-all duration-300" style="width:10rem;">
+              <div>
+                  <h1 class="text-center text-gray-900">Ajay Kumar's Feedback</h1>
+              </div>
+              <div class="">
+                  <p class="text-center text-gray-700">The exam is very nice but could have been better</p>
+              </div>
+          </div>                  
+      </div>
+
+      <div class="msg-card mt-[10] pt-[8rem] w-[80%]">
+                
+
+        <div class="mail-icon w-[12rem] shadow-md " style="width:12rem;height:10rem">
+
+          <div class="mail-body triangle-c1 rounded shadow-md"></div>
+          <div class="mail-triangle1 mail-triangle"></div>
+        </div>
+      <div class="msg h-[2rem] overflow-hidden hover:h-[10rem] rounded h-[10rem] ml-10  hover:opacity-100 hover:translate-y-[-5%] transition-all duration-300" style="width:10rem;">
+          <div>
+              <h1 class="text-center text-gray-900">Ajay Kumar's Feedback</h1>
+          </div>
+          <div class="">
+              <p class="text-center text-gray-700">The exam is very nice but could have been better</p>
+          </div>
+      </div>                  
+  </div>
+  <div class="msg-card mt-[10] pt-[8rem] w-[80%]">
+      
+
+      <div class="mail-icon w-[12rem] shadow-md " style="width:12rem;height:10rem">
+
+        <div class="mail-body triangle-c2 rounded shadow-md"></div>
+        <div class="mail-triangle2 mail-triangle"></div>
+      </div>
+      
+    <div class="msg h-[2rem] overflow-hidden hover:h-[10rem] rounded h-[10rem] ml-10  hover:opacity-100 hover:translate-y-[-5%] transition-all duration-300" style="width:10rem;">
+        <div>
+            <h1 class="text-center text-gray-900">Ajay Kumar's Feedback</h1>
+        </div>
+        <div class="">
+            <p class="text-center text-gray-700">The exam is very nice but could have been better</p>
+        </div>
+    </div>                  
+</div>
+
+<div class="msg-card mt-[10] pt-[8rem] w-[80%]">
+      
+
+  <div class="mail-icon w-[12rem] shadow-md " style="width:12rem;height:10rem">
+
+    <div class="mail-body triangle-c3 rounded shadow-md"></div>
+    <div class="mail-triangle3 mail-triangle"></div>
+  </div>
+  
+<div class="msg h-[2rem] overflow-hidden hover:h-[10rem] rounded h-[10rem] ml-10  hover:opacity-100 hover:translate-y-[-5%] transition-all duration-300" style="width:10rem;">
+    <div>
+        <h1 class="text-center text-gray-900">Ajay Kumar's Feedback</h1>
+    </div>
+    <div class="">
+        <p class="text-center text-gray-700">The exam is very nice but could have been better</p>
+    </div>
+</div>                  
+</div>
+
+              
+        </main>
+    </div>
+<!-- viewpage -->
+<div class="md:col-span-2 page page-toggle hidden h-screen" id="view-page">
+        <main class="px-16 bg-gray-200 h-full  md:col-span-2 overflow-y-scroll" id="view">
+        
+        <div class="view-list-item">
+            <div class="ml-5">
+                <img src="sem.jpg" class="view-img" alt="">
+            </div>
+
+            <div class="view-d-1">
+                <div>
+                <h1 class="view-head">E3-SEM-01</h1>
+                <p>DM</p>
+                </div>
+
+                <div class="view-d-2">
+                    <div>
+                        <h3 class="font-semibold">ExamDate:</h3><span>13-10-2024</span>
+                    </div>
+                    <div class="ml-5">
+                        <h3 class="font-semibold">ExamTime:</h3><span>12:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="view-badge">
+                <div>
+                    View
+                </div>
+            </div>
+        </div>
+
+        <div class="view-list-item">
+            <div class="ml-5">
+                <img src="sem.jpg" class="view-img" alt="">
+            </div>
+
+            <div class="view-d-1">
+                <div>
+                <h1 class="view-head">E3-SEM-01</h1>
+                <p>DM</p>
+                </div>
+
+                <div class="view-d-2">
+                    <div>
+                        <h3 class="font-semibold">ExamDate:</h3><span>13-10-2024</span>
+                    </div>
+                    <div class="ml-5">
+                        <h3 class="font-semibold">ExamTime:</h3><span>12:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="view-badge">
+                <div>
+                    View
+                </div>
+            </div>
+        </div>
+
+        <div class="view-list-item">
+            <div class="ml-5">
+                <img src="sem.jpg" class="view-img" alt="">
+            </div>
+
+            <div class="view-d-1">
+                <div>
+                <h1 class="view-head">E3-SEM-01</h1>
+                <p>DM</p>
+                </div>
+
+                <div class="view-d-2">
+                    <div>
+                        <h3 class="font-semibold">ExamDate:</h3><span>13-10-2024</span>
+                    </div>
+                    <div class="ml-5">
+                        <h3 class="font-semibold">ExamTime:</h3><span>12:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="view-badge">
+                <div>
+                    View
+                </div>
+            </div>
+        </div>
+
+        </main>
+    
+ 
+    <main class="px-16 h-[100vh] bg-gray-200 h-full  md:col-span-2 hidden overflow-y-scroll" id="view-questions">
+    <div>
+        <div class="view-each-header">
+            Descriptive
+        </div>
+        <div class="view-each-card">
+            <div class="view-each-inner-header">
+                Questions
+            </div>
+            <div class="view-each-item">
+                1.What is a process.Explain.
+            </div>
+            <div class="view-each-item">
+                2.What is a process.Explain.
+            </div>
+            <div class="view-each-item">
+                3.What is a process.Explain.
+            </div>
+            <div class="view-each-item">
+                4.What is a process.Explain.
+            </div>
+        </div>
+
+        <div class="view-each-card">
+            <div class="font-bold text-xl text-center mt-5 mb-5">
+                Choice Questions
+            </div>
+            <div class="view-each-item">
+                1.What is a process.Explain.
+            </div>
+            <div class="view-each-item">
+                2.What is a process.Explain.
+            </div>
+            <div class="view-each-item">
+                3.What is a process.Explain.
+            </div>
+            <div class="view-each-item">
+                4.What is a process.Explain.
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="text-3xl font-bold text-center mt-5">
+           Objective
+        </div>
+        <div class="view-each-card">
+            <div class="font-bold text-xl text-center mt-5 mb-5">
+                Questions
+            </div>
+            <div class="view-each-item">
+                1.What is a process.Explain.
+                <div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                    <div>
+                        <p>B.Yes</p>
+                    </div>
+                    <div>
+                        <p>C.Maybe</p>
+                    </div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-each-item">
+                2.What is a process.Explain.
+                <div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                    <div>
+                        <p>B.Yes</p>
+                    </div>
+                    <div>
+                        <p>C.Maybe</p>
+                    </div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-each-item">
+                3.What is a process.Explain.
+                <div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                    <div>
+                        <p>B.Yes</p>
+                    </div>
+                    <div>
+                        <p>C.Maybe</p>
+                    </div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-each-item">
+                4.What is a process.Explain.
+                <div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                    <div>
+                        <p>B.Yes</p>
+                    </div>
+                    <div>
+                        <p>C.Maybe</p>
+                    </div>
+                    <div>
+                        <p>A.No</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="flex justify-center">
+        <button class="bit-btn">Update</button>
+    </div>
+    </main>
+
+    <main class="px-16 py-6 bg-gray-200  md:col-span-2 h-full overflow-y-scroll hidden">
+        <div class="flex flex-col h-[30rem] justify-around update-card">
+            <div>
+            <div>
+                <div class="text-center font-semibold text-3xl">
+                    Question Type
+                </div>
+            </div>
+            <div>
+                <div class="text-center">
+                    <select name="" id="que" class="card text-gray-400 text-center h-[3rem] w-[5rem]">
+                        <option value="d">Descriptive</option>
+                        <option value="o">Objective</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div>
+                <div class="text-center font-semibold text-3xl">
+                    Question Number
+                </div>
+            </div>
+            <div>
+                <div class="text-center">
+                    <select name="" id="que" class="card text-gray-400 text-center h-[3rem] w-[5rem]">
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div class="text-center font-semibold text-3xl">
+                        Modified Question
+                    </div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <input type="text" class="card text-gray-400 text-center h-[3rem] w-[35rem]">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-5">
+                <button class="bit-btn">
+                    Update
+                </button>
+            </div>
+        
+        </div>
+
+    </main>
+</div>
+
+<!-- Evaluation Page -->
+<div class="md:col-span-2 page page-toggle hidden h-screen" id="evaluate-page">
+<main class="relative px-16   bg-gray-200  grid grid-cols-2 row-gap-0  md:col-span-2 overflow-y-scroll" id="eval-list">
+    <div class="mt-5">
+        <div class="relative card col-span-1 flex flex-col justify-center items-center">
+            <div class=" bg-blue-400 w-full flex justify-center py-2">
+                <h1 class="text-gray-100 font-bold">E-3 SEM-01</h1>
+            </div>
+            <div class="mt-10 transform translate-y-1/8">
+                <button class="bit-btn mt-5">Evaluate</button>
+            </div>
+            <div class="absolute top-15 right-15 quota-badge">
+                <h3>Remaining-10</h3>
+            </div>
+            <div class="absolute top-15 right-5 quota-badge">
+                <h3>Completed-10</h3>
+            </div>
+            <div class="absolute top-15 left-10 quota-badge">
+                <h3>Quota-20</h3>
+            </div>
+        </div>
+    </div>
+   
+
+
+</main>
+
+<main class="px-16 bg-gray-200 h-full grid grid-cols-2  md:col-span-2 overflow-y-scroll hidden" id="eval-each">
+<div class="col-span-2">
+    <div class="relative font-semibold p-4 bg-blue-600 text-gray-200 w-full">
+        <div class="flex justify-center text-3xl w-full">
+            Evaluation 
+        </div>
+
+        <div class="absolute top-0">
+            <button class="bit-btn">Back</button>
+        </div>
+
+        <div class="absolute right-5 top-0">
+            <button class="bit-btn">Submit</button>
+        </div>
+       </div>
+       <div class="mt-5">
+        <h1 class="flex justify-center font-bold text-2xl">
+            Allotted Marks
+        </h1>
+       </div>
+    <div class="shadow-md w-auto flex justify-center">
+        <div class="card w-[14rem] flex justify-start">
+            <div class="flex  flex-col items-center justify-center">
+                <div class="flex justify-center text-gray-100 bg-blue-500 p-2 w-full">
+    Q1
+                </div>
+                <div class="flex justify-center text-gray-100  bg-blue-300 p-2 w-full">
+    5
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex justify-center text-gray-100 bg-blue-500 p-2 w-full">
+    Q2
+                </div>
+                <div class="flex justify-center text-gray-100  bg-blue-300 p-2 w-full">
+    6
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex justify-center text-gray-100 bg-blue-500 p-2 w-full">
+    Q3
+                </div>
+                <div class="flex justify-center text-gray-100  bg-blue-300 p-2 w-full">
+    5
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex justify-center text-gray-100 bg-blue-500 p-2 w-full">
+    Q4
+                </div>
+                <div class="flex justify-center text-gray-100  bg-blue-300 p-2 w-full">
+    5
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex justify-center text-gray-100 bg-blue-500 p-2 w-full">
+    Q5
+                </div>
+                <div class="flex justify-center text-gray-100  bg-blue-300 p-2 w-full">
+    5
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex justify-center text-gray-100 bg-blue-500 p-2 w-full">
+    Q6
+                </div>
+                <div class="flex justify-center text-gray-100  bg-blue-300 p-2 w-full">
+    5
+                </div>
+            </div>
+        </div>
+
+    </div>   
+   
+
+    <div class="mt-10 mb-10 flex flex-col justify-center items-center">
+        <h1 class="font-bold mb-5 text-2xl">
+            Question 1 
+        </h1>
+        <h1 class="font-semibold text-xl">
+         How is a process created in operating system.
+        </h1>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+        <div class="font-bold text-2xl mb-5">
+            <h3>Answer</h3>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet optio ratione veniam praesentium quam facere eveniet nisi quae quos voluptatum velit possimus odit, aspernatur ad minima necessitatibus porro, nostrum tenetur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ducimus, molestiae itaque sequi minus reiciendis ea iste, voluptates necessitatibus numquam quod repudiandae. Asperiores, voluptatibus maxime praesentium neque rem ea non!
+        </div>
+    </div>
+
+    <div class="relative eval-card mt-10">
+        <div class="absolute left-5 flex items-center">
+            <svg class="text-gray-100 w-5" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+              </svg>
+
+              <div class="ml-5 hidden sm:block">
+                <h3 class="text-gray-200">prev</h3>
+              </div>
+              
+        </div>
+        <div class="absolute right-5 flex items-center">
+           
+              <div class="mr-5 hidden sm:block">
+                <h3 class="text-gray-200">Next</h3>
+              </div>
+
+              
+              <svg class="text-gray-100 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+              
+              
+        </div>
+        <div class="flex justify-center">
+            <div>
+                <h3 class="font-semibold text-gray-200">Allot Marks: </h3>
+            </div>
+            <div class="ml-5">
+                <input class="text-center w-10 md:w-20 rounded" value="0" type="number" min="0" max="7">
+            </div>
+           
+        </div>
+    </div>
+</div>
+   
+</main>
+
+</div>
+</div>
+<script src="nav.js"></script>
+<script src="teacher_page.js"></script>
+</body>
+</html>

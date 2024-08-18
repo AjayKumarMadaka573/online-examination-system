@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body">
+<div class="grid md:grid-cols-3 h-screen"><!-- Wrapper -->
+    <div class="absolute top-[1rem] left-10">
+        <button onclick="ToggleDarkMode(this)" class="text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Dark Mode</button>
+    </div>
+
+    <div class="absolute top-[15rem] left-10 q-dark hidden md:block">
+        <div class="flex justify-center border-b-2 border-gray-100">
+            <h5 class="font-semibold">NOTE</h5>
+        </div>
+        <div class="mt-10">
+            <h3>1.Write all the answers carefully</h3>
+        </div>
+        <div class="mt-10">
+            <h3>2.Don't try any malpractice.
+                </h3>
+        </div>
+        <div class="mt-10">
+            <h3>3.Serious action will be taken if found copying.
+            </h3>
+        </div>
+    </div>
+    <div class="md:col-span-1 md:flex md:justify-end bg-white nav-section text-gray-700">
+        
+        <nav class="text-right">
+            <div class="flex justify-between items-center" id="burger">
+                <h1 class="font-semibold uppercase mb-4 p-4 border-b border-gray-100">
+                    <a href="" class="text-xl">Exam</a>
+                </h1>
+                <div class="px-4 cursor-pointer md:hidden">
+                <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+
+                </div>
+            </div>
+            <ul class="text-sm mt-6 hidden md:block" id="menu">
+                <li class="d-menu">
+                    <div class="p-4 flex justify-end  border-r-4 border-r-primary menu-item" id="menu-descriptive"><span class="font-bold"> Descriptive </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                          </svg>
+                          
+                    </div>
+                </li>
+                <li class="o-menu">
+                    <div class="p-4 flex justify-end border-r-4 border-r-white menu-item" id="menu-objective"><span> Objective </span>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+                        </svg>
+  
+                </div>
+                </li>
+
+                    
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="md:col-span-2 page page-toggle h-screen" id="descriptive-page">
+ 
+        <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full" id="descriptive">
+            <div class="head flex justify-around h-[6rem] items-center text-lg font-bold bg-blue-400 text-gray-100">
+                <h3 id="exam-header-text" ><span class="exam-head">Mid</span> Exam</h3>
+                <h5 class="time">
+                    Time-Remaining: <span class="time-remaining" id="time-remaining"></span>
+                </h5>
+                <label for="questionNumberDropdown" id="qNoLabel">Select Question Number:</label>
+                <select class="card text-gray-600" id="questionNumberDropdown">
+                    <option value="1">Q1</option>
+                </select>
+               
+               
+            </div>
+            <div class="p-4">
+                <div class="flex justify-center m-4">
+                    <h1 class="text-xl font-semibold q-dark" id="dquestion">1.What is a process.Define it's characteristics.</h1>
+                </div>
+                <div class="flex justify-center m-4 ">
+                    <textarea class="w-[33rem] h-[20rem] flex flex-start items-start text-gray-500"  rows="10" cols="15" id="ans"></textarea>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <button class="bit-btn" onclick="submitAnswers()">Submit</button>
+                <button class="bit-btn ml-[10%]" value="d" onclick="attemptChoice(this)" id="attempt_choice">Attempt Choice</button>
+            </div>
+        </main>
+    
+
+    </div>
+
+
+<!-- page -->
+<div class="md:col-span-2 page page-toggle hidden h-screen" id="objective-page">
+    <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full" id="descriptive">
+        <div class="head flex justify-around h-[6rem] items-center text-lg font-bold bg-blue-400 text-gray-100">
+            <h3 id="exam-header-text"><span class="exam-head">Mid</span> Exam</h3>
+            <h5 class="time">
+                Time-Remaining: <span class="time-remaining" id="time-remaining"></span>
+            </h5>
+            <label for="questionNumberDropdown" id="qNoLabel">Select Question Number:</label>
+            <select class="card text-gray-600" id="oquestionNumberDropdown">
+                <option value="1">Q1</option>
+            </select>
+           
+           
+        </div>
+        <div class="p-4">
+            <div class="flex justify-center m-4">
+                <h1 class="text-xl font-semibold q-dark" id="oquestion">1.What is a process.Define it's characteristics.</h1>
+            </div>
+            <div class="flex justify-center m-4 q-dark">
+                <div class="space-y-4">
+                    <div class="flex items-center h-[4rem] w-[6rem]">
+                        <input type="radio" name="radio-group" value="option1" id="option1" class="appearance-none h-[1rem] w-[1rem] rounded-full border border-gray-500 shadow-sm checked:bg-blue-500 checked:border-transparent" />
+                        <label for="option1" class="ml-3 appearance-none h-full flex items-center">Option 1</label>
+                    </div>
+                    <div class="flex items-center h-[4rem] w-[6rem]">
+                        <input type="radio" name="radio-group" value="option2" id="option2" class="appearance-none h-[1rem] w-[1rem] rounded-full border border-gray-500 shadow-sm checked:bg-blue-500 checked:border-transparent" />
+                        <label for="option2" class="ml-3 appearance-none h-full flex items-center">Option 2</label>
+                    </div>
+                    <div class="flex items-center h-[4rem] w-[6rem]">
+                        <input type="radio" name="radio-group" value="option3" id="option3" class="appearance-none h-[1rem] w-[1rem] rounded-full border border-gray-500 shadow-sm checked:bg-blue-500 checked:border-transparent" />
+                        <label for="option3" class="ml-3 appearance-none h-full flex items-center">Option 3</label>
+                    </div>
+                    <div class="flex items-center h-[4rem] w-[6rem]">
+                        <input type="radio" name="radio-group" value="option4" id="option4" class="appearance-none h-[1rem] w-[1rem] rounded-full border border-gray-500 shadow-sm checked:bg-blue-500 checked:border-transparent" />
+                        <label for="option4" class="ml-3 appearance-none h-full flex items-center">Option 4</label>
+                    </div>
+                </div>
+            </div>
+
+        <div class="flex justify-center">
+            <button class="bit-btn" onclick="submitAnswers()">Submit</button>
+            
+        </div>
+    </main>
+</div>
+
+<div class="md:col-span-2 page page-toggle h-screen hidden" id="feedback-page">
+    <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full hidden" id="feedback-success">
+        <div class="card mt-[25%] p-4 h-[10rem] flex justify-center">
+            <h3 class="font-bold text-5xl">Feedback Submitted <br> Exam Attempted Successfully</h3>
+        </div>
+        <div class="flex justify-center mt-5">
+            <button class="bit-btn" onclick="goBack()">Go Back</button>
+        </div>
+    </main>
+    <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full" id="feedback">
+        <div class="card mt-[20%]">
+
+
+    <div class="flex justify-center p-2">
+      <h2 class="font-bold text-3xl">Exam Feedback</h2>
+    </div>
+    <div class="flex justify-center">
+        
+        <textarea id="feedback-text" name="feedback" class="bg-gray-700 ml-5 md:ml-[2rem] rounded text-gray-200 md:w-[40rem]" rows="5"  placeholder="write your feedback..."></textarea>
+    </div>
+    <div class="flex flex-col justify-center p-4">
+    <div class="flex justify-center">
+        <label for="rating">Rating:</label>
+    </div>
+    <div class="flex justify-around w-[60%] ml-[20%]">
+    <div class="flex justify-center">
+        <input type="radio" id="star5" name="rating" value="5"> <label for="star5" >5★</label>
+    </div>
+    <div class="flex justify-center">
+        <input type="radio" id="star4" name="rating" value="4"> <label for="star4" >4★</label>
+    </div>
+    <div class="flex justify-center">
+        <input type="radio" id="star3" name="rating" value="3"> <label for="star3" >3★</label>
+    </div>
+    <div class="flex justify-center">
+        <input type="radio" id="star2" name="rating" value="2"> <label for="star2" >2★</label>
+    </div>    
+    <div class="flex justify-center">
+        <input type="radio" id="star1" name="rating" value="1"> <label for="star1" >1★</label>
+    </div>    
+</div>
+    <div class="flex justify-center mt-10">
+        <button type="submit" class="bit-btn" onclick="submitFeedback()">Submit</button>
+    </div>
+        
+    </div>
+</div>
+</main>
+</div>
+<script src="nav.js"></script>
+<script src="exam_page.js"></script>
+</body>
+</html>

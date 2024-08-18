@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body">
+<div class="relative h-screen screen"><!-- Wrapper -->
+    <div id="popover" class="absolute top-[2rem] right-5 z-10 flex items-center justify-center hidden">
+        <div class="bg-white p-4 rounded shadow-md">
+          <p>Rgukt is a university offering 6year integrated course.</p>
+          <div class="progress-bar bg-blue-500 h-1 rounded-full">
+            <div id="progress-fill" class="bg-blue-900 h-full"></div>
+          </div>
+        </div>
+      </div>
+    <div class="page page-toggle h-screen grid grid-cols-2 p-16 overflow-y-scroll" id="schedule-page">
+ 
+        <main class="relative px-16  py-2 bg-gray-100 col-span-2 h-[30rem] md:col-span-1 md:h-full overflow-y-auto rounded" >
+            
+            
+            <div class="flex absolute top-[1rem] left-[-0.1rem] md:left-[4rem] md:ml-5 justify-around">
+                <div class=" flex justify-center">
+                    <a href="https://rguktn.ac.in" class="text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">&nbsp;Home&nbsp;</a>
+                </div>
+            
+                <div class=" flex justify-center">
+                    <button onclick="ToggleDarkMode(this)" class="text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Dark Mode</button>
+                </div>
+    
+                <div class=" flex justify-center">
+                    <button onclick="popover_func()" class="text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">About Us</button>
+                </div>
+            </div>
+
+            <div class="absolute top-[17%] md:top-[30%] d-text">
+                <div class="text-2xl">
+                    <h3>Hello</h3>
+                </div>
+                <div>
+                    <h3 class="text-2xl">Welcome To.....</h3>
+                </div>
+            </div>
+            
+            <div class="flex flex-col justify-center items-center h-full">
+
+                <div >
+                    <img class="h-[5rem]" src="Logo.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-5xl font-bold d-text">RGUKT NUZVID</h1> 
+                 </div>
+                 <div>
+                     <h3 class="text-2xl font-semibold d-text">Catering to the needs of rural youth</h3>
+                 </div>
+            </div>
+            <div class="absolute bottom-5 right-0 flex justify-center w-full">
+                <div class="d-text text-xs text-center">
+                    © Rajiv Gandhi University of Knowledge Technologies, All Rights Reserved; .
+                </div>
+            </div>
+           </main>
+        <main class="px-16  py-2 bg-gray-100 col-span-2 h-[30rem] md:col-span-1 md:h-full overflow-y-auto rounded bg-gradient-to-br from-purple-500 to-pink-500 login_" id="s-login">
+          
+            <div class="relative flex justify-center items-center h-full">
+                <div class="relative w-full max-w-md p-6  rounded-md shadow-md bg-white signin-layout">
+                  <h1 class="text-3xl font-bold text-center d-text">Student Sign In</h1>
+              
+                  <div>
+                    <div class="space-y-6">
+                      <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 d-text-l">Student Id Number:</label>
+                        <input type="text" id="sid" name="email" autocomplete="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your student id">
+                      </div>
+              
+                      <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 d-text-l">Password</label>
+                        <input type="password" id="spassword" name="password" autocomplete="current-password" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your password">
+                      </div>
+              
+                      <div>
+                        <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="s-btn">Sign In</button>
+                      </div>
+                    </div>
+                </div>
+              
+                  <div class="text-center">
+                    <a href="#" class="inline-flex items-center text-sm font-medium d-text-l text-gray-700 hover:text-gray-900">
+                      Forgot your password?
+                    </a>
+                  </div>
+                
+                  
+                
+                </div>
+                <div class="absolute bottom-5 right-[32%] p-2">
+                    <button value="t-login" class="rounded-xl bg-indigo-800 btn text-gray-100 transform hover:scale-125 hover:opacity-50 transition duration-300 ease-out" onclick="changeLoginPage(this)">Teacher Login</button>
+                  </div>
+              </div>
+
+              
+        </main>
+
+        <main class="px-16  py-2 bg-gray-100 col-span-2 h-[30rem] md:col-span-1 md:h-full overflow-y-auto rounded bg-gradient-to-br from-purple-500 to-pink-500 login_ hidden" id="t-login">
+          
+            <div class="relative flex justify-center items-center h-full">
+                <div class="relative w-full max-w-md p-6  rounded-md shadow-md bg-white signin-layout">
+                  <h1 class="text-3xl font-bold text-center d-text">Teacher Sign In</h1>
+              
+                  <div>
+                    <div class="space-y-6">
+                      <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 d-text-l">Teacher Id Number:</label>
+                        <input type="text" id="tid" name="email" autocomplete="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your teacher id">
+                      </div>
+              
+                      <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 d-text-l">Password</label>
+                        <input type="password" id="tpassword" name="password" autocomplete="current-password" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your password">
+                      </div>
+              
+                      <div>
+                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="t-btn">Sign In</button>
+                      </div>
+                    </div>
+                </div>
+              
+                  <div class="text-center">
+                    <a href="#" class="inline-flex items-center text-sm font-medium d-text-l text-gray-700 hover:text-gray-900">
+                      Forgot your password?
+                    </a>
+                  </div>
+                
+                  
+                
+                </div>
+                <div class="absolute bottom-5 right-[32%] p-2">
+                    <button value="s-login" class="rounded-xl bg-indigo-800 btn text-gray-100 transform hover:scale-125 hover:opacity-50 transition duration-300 ease-out" onclick="changeLoginPage(this)">Student Login</button>
+                  </div>
+              </div>
+
+              
+        </main>
+
+    </div>
+
+   
+
+
+<!-- page -->
+<div class="md:col-span-2 page page-toggle overflow-y-auto h-screen hidden" id="results-page">
+    <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full" id="descriptive">
+        <div class="font-semibold p-4 bg-blue-600 text-gray-200 mt-10">
+            <div class="flex justify-center text-3xl uppercase ">
+                Completed Exams
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2">
+
+            <div class="card ml-5 p-2 mt-5 items-center col-span-2 md:col-span-1">
+                <div class="flex justify-around">
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Year: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>E3 </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Type: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>Sem-1</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Date: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>15-08-2024</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-center mt-5">
+                    <button class="btn border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 transition ease-out duration-300">Evaluate</button>
+                </div>
+
+
+                
+            </div>
+
+
+            <div class="card ml-5 p-2 mt-5 items-center col-span-2 md:col-span-1">
+                <div class="flex justify-around">
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Year: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>E3 </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Type: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>Sem-1</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Date: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>15-08-2024</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-center mt-5">
+                    <button class="btn border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 transition ease-out duration-300">Evaluate</button>
+                </div>
+
+
+                
+            </div>
+
+            <div class="card ml-5 p-2 mt-5 items-center col-span-2 md:col-span-1">
+                <div class="flex justify-around">
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Year: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>E3 </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Type: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>Sem-1</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Date: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>15-08-2024</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-center mt-5">
+                    <button class="btn border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 transition ease-out duration-300">Evaluate</button>
+                </div>
+
+
+                
+            </div>
+
+
+        </div>
+    </main>
+ 
+</div>
+<!-- <script src="nav.js"></script> -->
+<script src="login_page.js"></script>
+</body>
+</html>

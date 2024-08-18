@@ -1,0 +1,7 @@
+{
+  "type":"sem",
+  "questions": ["What is the largest landmass on Earth?", "What is the primary function of the human heart", "What is the process by which plants convert sunlight into energy", "Who is considered the founding father of modern physics?", "correct"],
+  "answers": ["The world's most extensive continuous expanse of land, often divided into continents and countries.","The vital organ responsible for pumping blood throughout the body, ensuring oxygen and nutrient delivery.", "A complex biological process involving chlorophyll, water, and carbon dioxide to produce glucose and oxygen.", "A renowned scientist whose theories revolutionized understanding of space, time, gravity, and energy.", "correct"],
+  
+  "score":15
+}

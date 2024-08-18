@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body">
+<div class="grid md:grid-cols-3 h-screen"><!-- Wrapper -->
+    <div class="absolute top-[1rem] left-[6rem] flex flex-col">
+        <button onclick="ToggleDarkMode(this)" class="text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Dark Mode</button>
+        
+        <button onclick="ToggleMsg(this)" class="mt-5 text-primary btn border-primary ml-10 md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 hidden lg:block">Send Message</button>
+    
+    </div>
+
+    <div class="absolute top-[15rem] left-[3rem] flex flex-col justify-center items-center text-3xl hidden lg:block" id="header">
+        <div class="font-bold q-dark">
+            RGUKT Examinations
+           
+        </div>
+        <div class="font-bold q-dark mt-5 text-center">
+            Admin Page
+        </div>
+        <div class="text-xs q-dark">
+            All the Examinations schedules are maintaned here
+        </div>
+    </div>
+
+    
+    <div class="md:col-span-1 md:flex md:justify-end bg-white nav-section text-gray-700">
+        
+        <nav class="text-right">
+            <div class="flex justify-between items-center" id="burger">
+                <h1 class="font-semibold uppercase mb-4 p-4 border-b border-gray-100">
+                    <a href="" class="text-xl">Admin</a>
+                </h1>
+                <div class="px-4 cursor-pointer md:hidden">
+                <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+
+                </div>
+            </div>
+            <ul class="text-sm mt-6 hidden md:block" id="menu">
+                <li class="d-menu">
+                    <div class="p-4 flex justify-end  border-r-4 border-r-primary menu-item" id="menu-schedule"><span class="font-bold"> schedule </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                          </svg>
+                          
+                    </div>
+                </li>
+                <li class="o-menu">
+                    <div class="p-4 flex justify-end border-r-4 border-r-white menu-item" id="menu-result"><span> Results</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+                        </svg>
+  
+                </div>
+                </li>
+
+                    
+
+            </ul>
+
+            <footer class="flex flex-col absolute bottom-0 left-0 hidden lg:block py-2">
+                <div class="footer-content flex items-center">
+                  <div class="text-xs flex ml-5"><div>Develepor:</div>  <div>Madaka Ajay Kumar</div></div>
+                 
+                
+                  <p class="text-xs ml-10">&copy;MAK. All rights reserved.</p>
+                </div>
+              </footer>
+        </nav>
+        <div class="absolute left-5 top-[10rem] hidden" id="msg-container">
+            <div class="flex flex-col justify-center items-center mb-5">
+                <div class="mb-5 flex ">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>
+                      
+                    <label for="recipient" class="text-xl mr-5">&nbsp;Recipient</label>
+
+                    
+                </div>
+                <div>
+                    <button type="button" onclick="recipientSelect(this)" id="studentButton" class="btn border-primary md:border-2 bg-primary text-gray-200 transition ease-out duration-300">Student</button>
+                    <button type="button" onclick="recipientSelect(this)" id="teacherButton" class="btn border-primary md:border-2 ml-5 transition ease-out duration-300">Teacher</button>
+                </div>
+               
+            </div>
+            <div class="flex flex-col justify-center items-center mb-5 hidden" id="teacherColumn">
+                <label for="">Enter Teacher Id</label>
+                <input type="text" name="" class="bg-gray-200 rounded" id="teacherId">
+            </div>
+           <div class="flex flex-col justify-center items-center">
+            <label for="message">Message:</label>
+            <textarea  id="message" name="message" class="rounded bg-gray-200 text-gray-700" rows="4" cols="40"></textarea>
+           </div>
+           <div class="flex justify-center mt-5">
+            <button type="button" class="schedule-btn" onclick="sendMessage()">Send Message</button>
+           </div>
+            
+        </div>
+    </div>
+
+    <div class="md:col-span-2 page page-toggle h-screen" id="schedule-page">
+ 
+        <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full overflow-y-auto" id="start-section">
+           <div class="font-semibold p-4 bg-blue-600 text-gray-200 mt-10">
+            <div class="flex justify-center text-3xl uppercase">
+                schedule
+            </div>
+           </div>
+
+           <div class="flex flex-col ml-5 mt-10">
+            <div id="formGroup" class="flex flex-col">  <label for="examType">Exam Type:</label>
+                <select class="form-select mb-10 rounded  h-[2rem]" id="examType">
+                  <option value="dummy">---Select An Option---</option>
+                  <option value="sem">Sem</option>
+                  <option value="mid">Mid</option>
+                  <option value="assignment">Assignment</option>
+                </select>
+              
+                <label for="examNumber">Exam Number:</label>
+                <input type="Number" class="form-control mb-10 rounded h-[2rem]" id="examNumber" name="Numberpicker">
+              
+                <label for="year">Select Year:</label>
+                <select class="form-select rounded mb-10 h-[2rem]" id="year">
+                  <option value="dummy">---Select An Option---</option>
+                  <option value="e1">E-1</option>
+                  <option value="e2">E-2</option>
+                  <option value="e3">E-3</option>
+                </select>
+              
+                <label for="Batch">Select Batch:</label>
+                <select class="form-select rounded mb-10 h-[2rem]" id="Batch">
+                  <option value="dummy">---Select An Option---</option>
+                  <option value="N20">N20</option>
+                  <option value="N21">N21</option>
+                  <option value="N22">N22</option>
+                </select>
+              
+                </div>
+              <div class="flex justify-center">
+                <button class="bit-btn" onclick="createSchedule()" id="create-start">submit</button>
+              </div>
+              
+           </div>
+        </main>
+        <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full overflow-y-auto hidden" id="schedule-section">
+            <div class="font-semibold p-4 bg-blue-600 text-gray-200 mt-10">
+                <div class="flex justify-center text-3xl">
+                    schedule
+                </div>
+               </div>
+
+               <div class="card mt-10 p-4">
+                <div class=" schedule-card flex justify-around p-4">
+                    <div  class="flex items-center">
+                        <h3 class="font-bold">Subject:&nbsp; </h3><span>DM</span>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="font-bold">ExamDate: </h3><span><input class="rounded text-gray-600 ml-5" type="date"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="font-bold">ExamTime: </h3><span><input class="rounded text-gray-600 ml-5" type="time"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="font-bold">TeacherId: </h3><span><input class="rounded text-gray-600 ml-5 w-[5rem]" type="text"></span>
+                    </div>
+                </div>
+               </div>
+               <div class="card mt-10 p-4">
+                <div class=" schedule-card flex justify-around p-4">
+                    <div  class="flex items-center">
+                        <h3 class="font-bold">Subject:&nbsp; </h3><span>DM</span>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="font-bold">ExamDate: </h3><span><input class="rounded text-gray-600 ml-5" type="date"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="font-bold">ExamTime: </h3><span><input class="rounded text-gray-600 ml-5" type="time"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="font-bold">TeacherId: </h3><span><input class="rounded text-gray-600 ml-5 w-[5rem]" type="text"></span>
+                    </div>
+                </div>
+               </div>
+               <div class="flex mt-10 justify-center">
+                 <button class="schedule-btn">Create Schedule</button>
+                 <button class="schedule-btn ml-15">Cancel Schedule</button>
+               </div>
+         </main>
+
+    </div>
+
+
+<!-- page -->
+<div class="md:col-span-2 page page-toggle overflow-y-auto h-screen hidden" id="results-page">
+    <main class="px-16  py-2 bg-gray-100 md:col-span-2 h-full overflow-y-auto" id="descriptive">
+        <div class="font-semibold p-4 bg-blue-600 text-gray-200 mt-10">
+            <div class="flex justify-center text-3xl uppercase ">
+                Completed Exams
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2" id="completed-exams">
+
+            <div class="card ml-5 p-2 mt-5 items-center col-span-2 md:col-span-1">
+                <div class="flex justify-around">
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Year: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>E3 </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Type: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>Sem-1</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Date: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>15-08-2024</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-center mt-5">
+                    <button class="btn border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 transition ease-out duration-300">Evaluate</button>
+                </div>
+
+
+                
+            </div>
+
+
+            <div class="card ml-5 p-2 mt-5 items-center col-span-2 md:col-span-1">
+                <div class="flex justify-around">
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Year: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>E3 </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Type: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>Sem-1</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Date: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>15-08-2024</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-center mt-5">
+                    <button class="btn border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 transition ease-out duration-300">Evaluate</button>
+                </div>
+
+
+                
+            </div>
+
+            <div class="card ml-5 p-2 mt-5 items-center col-span-2 md:col-span-1">
+                <div class="flex justify-around">
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Year: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>E3 </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Type: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>Sem-1</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="font-semibold">Exam Date: </h3>
+                        </div>
+                        <div class="res-card p-2 text-center">
+                            <h3>15-08-2024</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-center mt-5">
+                    <button class="btn border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 transition ease-out duration-300">Evaluate</button>
+                </div>
+
+
+                
+            </div>
+
+
+        </div>
+    </main>
+ 
+</div>
+<script src="nav.js"></script>
+<script src="admin_page.js"></script>
+</body>
+</html>
